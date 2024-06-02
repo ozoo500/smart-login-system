@@ -6,10 +6,9 @@ let nameInput = document.getElementById("userName");
 let emailInput = document.getElementById("email");
 let passInput = document.getElementById("password");
 let errorMessage = document.getElementById("message");
+let welcome =document.getElementById("welcom-txt");
 
 
-
-console.log(signInBtn.innerHTML)
 
 signInText.onclick = function () {
     console.log(email.value);
@@ -84,9 +83,21 @@ function AddUserToDb(email, pass, userName) {
     signInText.click(); 
 
 }
+let welcomeMessage;
+function checkUser(email, pass) {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+   
 
+    const user = users.find(user => user.userEmail === email && user.userPass === pass);
+    if (user) {
+       welcomeMessage =`Welcome, ${user.nameOfUser}!`;
+        console.log(welcomeMessage);
+        window.location.href = "home.html"; 
+        console.log(logOutBtn);
 
-
-
+    } else {
+        errorMessage.innerHTML = "Incorrect email or password. Please try sign up.";
+    }
+}
 
 
