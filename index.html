@@ -16,15 +16,18 @@
             <h1 class="h1 text-color">Smart Login System</h1>
             <div class="form">
                 <div class="input-field" id="nameField" style="max-height: 0;">
-                    <input type="text" placeholder="Name">
+                    <input type="text" id="userName" placeholder="Name">
                 </div>
                 <div class="input-field">
-                    <input type="email" placeholder="Email">
+                    <input type="email" id="email" placeholder="Email">
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password">
                 </div>
                 <button class="btn" id="signInBtn">Sign In</button>
+
+                <div id="message" class="error-message"></div>
+
                 <p id="signInText">Dont have an account? Sign Up</p>
             </div>
         </div>

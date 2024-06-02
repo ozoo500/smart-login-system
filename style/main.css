@@ -57,7 +57,10 @@ input{
     color: white;
     margin-top: .5rem;
 }
-
+.error-message{
+    color: red;
+    
+}
 
 
 
