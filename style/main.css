@@ -32,6 +32,9 @@
 .input-field{
     margin: 1.25rem ;
     border-radius: 1rem;
+    max-height: 65;
+    transition:max-height 0.5s;
+    overflow: hidden;
 
 }
 input{
